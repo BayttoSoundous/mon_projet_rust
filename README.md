@@ -293,7 +293,20 @@ Une écriture possible (forme “structurelle”) :
 [ u ] = [ C   0   0 ] [   e   ]
 [ θ ]   [  0   G   0 ] [   u   ]
 '''
-
+\[
+\begin{bmatrix}
+e \\ u \\ \theta
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & -1 \\
+C & 0 & 0 \\
+0 & G & 0
+\end{bmatrix}
+\begin{bmatrix}
+\theta_{ref} \\ e \\ u
+\end{bmatrix}
+\]
 > Ici `C = C(s)` et `G = G(s)` (notation compacte).
 
 **À quoi sert le SFG ?**
