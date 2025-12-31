@@ -402,4 +402,22 @@ avec \(C=C(s)\) et \(G=G(s)\).
 - Donner une représentation mathématique équivalente au schéma-blocs.
 - Retrouver la fonction de transfert globale (ex. via la formule de Mason).
 - Clarifier les dépendances entre signaux \( \Theta_{\text{ref}}, e, u, \Theta \).
+### X.7.2 Écriture matricielle compacte (forme structurelle)
+
+$$
+\begin{bmatrix}
+e \\ u \\ \Theta
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & -1 \\
+C(s) & 0 & 0 \\
+0 & G(s) & 0
+\end{bmatrix}
+\begin{bmatrix}
+\Theta_{\text{ref}} \\ e \\ u
+\end{bmatrix}
+$$
+
+avec \(C=C(s)\) et \(G=G(s)\).
 
