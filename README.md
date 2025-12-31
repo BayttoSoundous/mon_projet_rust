@@ -326,29 +326,28 @@ L(s) = Kp * K / ( s*(J*s + f) )
 ## 4.9 Forme d’état : matrices du système (plant)
 
 ### 4.9.1 États
-```
+
 
 x1 = θ
 x2 = ω
 
-```
+
 
 ### 4.9.2 Équations d’état
-```
+
 
 x1_dot = x2
 x2_dot = -(f/J)*x2 + (K/J)*u
 
-```
+
 
 ### 4.9.3 Matrices
-```
+
 
 x_dot = A*x + B*u
 y     = C*x + D*u
 
-```
-```
+
 
 A = [ 0     1   ]
 [ 0   -f/J  ]
@@ -360,7 +359,7 @@ C = [ 1   0 ]
 
 D = [ 0 ]
 
-```
+
 
 **À quoi sert la forme d’état ?**
 - Analyse stabilité via valeurs propres.
