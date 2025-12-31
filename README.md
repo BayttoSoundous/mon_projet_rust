@@ -1,8 +1,8 @@
-# Asservissement de position d’un moteur DC par PID (Arduino + L298N + Encodeur KY-040)
+# Asservissement de position d’un moteur DC par PID (Arduino + L298N + Encodeur KY-040):
 
 
 
-## 4) Équations du projet (détaillées et expliquées)
+## 4) Équations du projet:
 
 Cette section présente le **modèle (plant)** du moteur DC, le **calcul de l’erreur**, la **loi PID** et l’analyse **boucle ouverte / boucle fermée** (SFG, Root Locus, forme d’état).
 
@@ -241,9 +241,7 @@ u = C(s) * e
 
 
 
-### X.7.2 Matrice (écriture compacte, équivalente schéma-blocs)
-Une écriture possible (forme “structurelle”) :
-
+### 4.7.2 Matrice (écriture compacte, équivalente schéma-blocs)
 
 Une écriture possible (forme **structurelle**) :
 
@@ -338,7 +336,6 @@ La commande est appliquée **sans retour de mesure**, donc il n’y a **aucune c
 
  Résultat : le moteur peut tourner mais **ne garantit pas** l’arrêt exactement à l’angle demandé (ex : 180°), car la vitesse dépend de la charge, de la tension batterie et des frottements.
 
-*(Colle ici ton code Arduino AVANT PID)*
 
 ### 2) Code Arduino APRÈS PID (Boucle fermée)
 
@@ -347,12 +344,12 @@ L’angle mesuré est comparé à la consigne, puis l’erreur est corrigée par
 
  Résultat : le moteur atteint la consigne (ex : 180°) avec une meilleure précision et **s’arrête** lorsque l’erreur devient faible (tolérance).
 
-*(Colle ici ton code Arduino APRÈS PID)*
+
 
 ### Rôle des gains PID (rappel rapide)
 
 - **Kp** : augmente la rapidité de réponse (réduit l’erreur rapidement), mais peut créer du dépassement si trop grand.  
-- **Ki** : supprime l’erreur statique (offset), mais peut provoquer une oscillation si trop élevé.  
-- **Kd** : réduit les oscillations et le dépassement (effet “frein”), améliore la stabilité.
+- **Ki** : supprime l’erreur statique , mais peut provoquer une oscillation si trop élevé.  
+- **Kd** : réduit les oscillations et le dépassement, améliore la stabilité.
 
 
