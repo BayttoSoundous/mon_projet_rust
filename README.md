@@ -105,11 +105,9 @@ Cette section présente le **modèle (plant)** du moteur DC, le **calcul de l’
 ### 4.2.1 Équation électrique
 
 **Équation :**
-```
 
 V(t) = R*i(t) + L*di(t)/dt + K_e*ω(t)
 
-```
 
 **À quoi sert cette équation ?**
 - Elle relie la tension appliquée `V` au courant `i` et à la vitesse `ω`.
