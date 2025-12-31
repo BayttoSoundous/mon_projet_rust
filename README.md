@@ -300,7 +300,6 @@ Une écriture possible (forme “structurelle”) :
 - Représentation mathématique équivalente au schéma-blocs.
 - Permet de retrouver la FT globale (ex. formule de Mason).
 
-
 ---
 
 ## 4.8 Root Locus (lieu des racines)
