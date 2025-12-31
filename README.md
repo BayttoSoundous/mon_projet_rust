@@ -244,11 +244,9 @@ u = C(s) * e
 ### X.7.2 Matrice (écriture compacte, équivalente schéma-blocs)
 Une écriture possible (forme “structurelle”) :
 
-''' 
-[ e ]   [  1   0  -1 ] [ θ_ref ]
-[ u ] = [ C   0   0 ] [   e   ]
-[ θ ]   [  0   G   0 ] [   u   ]
-'''
+┌  e  ┐     ┌  1   0  -1 ┐ ┌ θ_ref ┐
+        │  u  │  =  │  C   0   0 │ │   e   │
+        └  θ  ┘     └  0   G   0 ┘ └   u   ┘
 
 > Ici `C = C(s)` et `G = G(s)` (notation compacte).
 
