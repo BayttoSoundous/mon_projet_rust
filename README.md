@@ -378,7 +378,7 @@ Cette section présente les deux versions du programme Arduino utilisées dans c
 Dans cette version, le moteur est commandé directement via le driver **L298N** (PWM pour la vitesse + IN3/IN4 pour le sens).  
 La commande est appliquée **sans retour de mesure**, donc il n’y a **aucune correction d’erreur**.
 
-➡️ Résultat : le moteur peut tourner mais **ne garantit pas** l’arrêt exactement à l’angle demandé (ex : 180°), car la vitesse dépend de la charge, de la tension batterie et des frottements.
+ Résultat : le moteur peut tourner mais **ne garantit pas** l’arrêt exactement à l’angle demandé (ex : 180°), car la vitesse dépend de la charge, de la tension batterie et des frottements.
 
 *(Colle ici ton code Arduino AVANT PID)*
 
@@ -387,7 +387,7 @@ La commande est appliquée **sans retour de mesure**, donc il n’y a **aucune c
 Dans cette version, on ajoute un **retour encodeur** pour mesurer la position réelle du moteur (angle).  
 L’angle mesuré est comparé à la consigne, puis l’erreur est corrigée par un **PID** qui ajuste automatiquement la commande envoyée au moteur.
 
-➡️ Résultat : le moteur atteint la consigne (ex : 180°) avec une meilleure précision et **s’arrête** lorsque l’erreur devient faible (tolérance).
+ Résultat : le moteur atteint la consigne (ex : 180°) avec une meilleure précision et **s’arrête** lorsque l’erreur devient faible (tolérance).
 
 *(Colle ici ton code Arduino APRÈS PID)*
 
