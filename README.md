@@ -1,6 +1,6 @@
 # Asservissement de position d’un moteur DC par PID (Arduino + L298N + Encodeur KY-040)
 
-**Modélisation • Boucle ouverte/fermée • SFG • Root Locus • Simulation • Implémentation**
+
 
 ---
 
