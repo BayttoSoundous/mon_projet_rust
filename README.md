@@ -367,3 +367,32 @@ D = [ 0 ]
 - Base pour contrôle avancé (retour d’état).
 
 ---
+## 5) Partie Arduino : Code avant PID / après PID
+
+Cette section présente les deux versions du programme Arduino utilisées dans ce projet :
+- une version **avant PID** (commande simple du moteur)
+- une version **après PID** (asservissement avec correcteur PID et retour encodeur)
+
+### 1) Code Arduino AVANT PID (Boucle ouverte)
+
+Dans cette version, le moteur est commandé directement via le driver **L298N** (PWM pour la vitesse + IN3/IN4 pour le sens).  
+La commande est appliquée **sans retour de mesure**, donc il n’y a **aucune correction d’erreur**.
+
+➡️ Résultat : le moteur peut tourner mais **ne garantit pas** l’arrêt exactement à l’angle demandé (ex : 180°), car la vitesse dépend de la charge, de la tension batterie et des frottements.
+
+*(Colle ici ton code Arduino AVANT PID)*
+
+### 2) Code Arduino APRÈS PID (Boucle fermée)
+
+Dans cette version, on ajoute un **retour encodeur** pour mesurer la position réelle du moteur (angle).  
+L’angle mesuré est comparé à la consigne, puis l’erreur est corrigée par un **PID** qui ajuste automatiquement la commande envoyée au moteur.
+
+➡️ Résultat : le moteur atteint la consigne (ex : 180°) avec une meilleure précision et **s’arrête** lorsque l’erreur devient faible (tolérance).
+
+*(Colle ici ton code Arduino APRÈS PID)*
+
+### Rôle des gains PID (rappel rapide)
+
+- **Kp** : augmente la rapidité de réponse (réduit l’erreur rapidement), mais peut créer du dépassement si trop grand.  
+- **Ki** : supprime l’erreur statique (offset), mais peut provoquer une oscillation si trop élevé.  
+- **Kd** : réduit les oscillations et le dépassement (effet “frein”), améliore la stabilité.
