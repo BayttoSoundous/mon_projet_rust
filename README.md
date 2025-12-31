@@ -274,9 +274,9 @@ Avec retour unitaire `H(s)=1` :
 
 ---
 
-## 4.7 SFG (Signal Flow Graph) + écriture compacte
+## X.7 SFG (Signal Flow Graph) + écriture compacte
 
-### 4.7.1 Équations SFG
+### X.7.1 Équations SFG
 
 
 e = θ_ref - θ
@@ -285,7 +285,7 @@ u = C(s) * e
 
 
 
-### 4.7.2 Matrice (écriture compacte, équivalente schéma-blocs)
+### X.7.2 Matrice (écriture compacte, équivalente schéma-blocs)
 Une écriture possible (forme “structurelle”) :
 
 
@@ -293,11 +293,13 @@ Une écriture possible (forme “structurelle”) :
 [ u ] = [ C   0   0 ] [   e   ]
 [ θ ]   [  0   G   0 ] [   u   ]
 
+
 > Ici `C = C(s)` et `G = G(s)` (notation compacte).
 
 **À quoi sert le SFG ?**
 - Représentation mathématique équivalente au schéma-blocs.
 - Permet de retrouver la FT globale (ex. formule de Mason).
+
 
 ---
 
